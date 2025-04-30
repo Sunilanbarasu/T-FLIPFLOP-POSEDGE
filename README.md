@@ -62,10 +62,12 @@ begin
 endmodule
 ```
 **RTL LOGIC FOR FLIPFLOPS**
-![Uploading de tf.png…]()
+![de tf](https://github.com/user-attachments/assets/4442abd2-b095-4c94-9fa5-028c458b89a6)
+
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
-![Uploading det.f.png…]()
+
+![det f](https://github.com/user-attachments/assets/ae180264-e422-4998-a820-94e28afa7006)
 
 **RESULTS**
 Hence, T flipflop using verilog and validating their functionality using their functional tables is implemented.
