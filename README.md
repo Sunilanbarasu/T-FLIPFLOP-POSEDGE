@@ -28,15 +28,43 @@ From the above characteristic table, we can directly write the next state equati
 
 **Procedure**
 
-/* write all the steps invloved */
+Start with the current state Q and input T.
+
+If T = 0, the output Q remains unchanged.
+
+If T = 1, the output Q toggles (i.e., Q = NOT Q).
+
+Apply clock pulse to trigger the flip-flop.
+
+On the rising (or falling) clock edge, check the T input.
+
+Update the output based on toggle condition.
+
+Store the new output state until the next clock edge.
+
+Repeat the process for each clock cycle.
 
 **PROGRAM**
+ ```
+module t_ff(t, clk, rst, q);
+  input t, clk, rst;
+  output reg q;
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
-
+  always @(posedge clk or posedge rst) 
+begin
+    if (rst)
+      q <= 0; // Reset the flip-flop
+    else if (t==0)
+      q <= q; 
+     else
+        q<=~q;
+  end
+endmodule
+```
 **RTL LOGIC FOR FLIPFLOPS**
+![Uploading de tf.png…]()
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
+![Uploading det.f.png…]()
 
 **RESULTS**
